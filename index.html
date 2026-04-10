@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+  <link rel="shortcut icon" href="assets/pokeball-favicon.png" type="image/x-icon">
+</head>
+<body>
+  <div class="main-container">
+    <div class="screen active" id="quiz-start-wrapper">
+      <h2>Pokemon Quiz!</h2>
+      <p>Test your pokemon knowledge with these fun questions</p>
+
+      <button id="start-btn">Start Quiz</button>
+    </div>
+
+    <!-- questions page -->
+    <div class="screen" id="quiz-question-wrapper">
+      <!-- question -->
+      <div class="quiz-header">
+        <h2 id="question-text"></h2>
+
+        <div class="quiz-info">
+          <p>Question <span id="current-question"></span> of <span id="total-questions"></span></p>
+          <p>Score: <span id="score">0</span></p>
+        </div>
+      </div>
+
+      <!-- answer container -->
+      <div id="answer-wrapper" class="answer-wrapper">
+        <!-- answer options buttons from JS -->
+      </div>
+
+      <!-- progress bar -->
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+
+    </div>
+
+    <!-- last (result) page -->
+    
+    <div id="result-wrapper" class="screen">
+      <h2>Quiz Result</h2>
+
+      <div class="result-info">
+        <p>You scored <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+
+        <div id="result-message">Good!</div>
+      </div>
+
+      <button id="restart-btn">Restart Quiz</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

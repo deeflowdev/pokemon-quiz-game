@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-body: #eef2ff;
+
+  --card-bg: #ffffff;
+  --card-border: #dbeafe;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+
+  /* pokemon palette */
+  --accent: #ffcb05;
+  --accent-hover: #eab308;
+
+  --poke-red: #ef4444;
+  --poke-red-hover: #dc2626;
+
+  --poke-blue: #2563eb;
+
+  --option-bg: #f8fafc;
+  --option-hover: #e0f2fe;
+  --option-border: #bae6fd;
+
+  --correct-bg: #dcfce7;
+  --correct-border: #4ade80;
+  --correct-text: #166534;
+
+  --incorrect-bg: #fee2e2;
+  --incorrect-border: #f87171;
+  --incorrect-text: #991b1b;
+
+  --shadow: rgba(37, 99, 235, 0.15);
+}
+
+body{
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #e0f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container{
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  box-shadow: 0 15px 40px var(--shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+/* screens */
+
+.screen{
+  text-align: center;
+  padding: 2rem;
+  display: none;
+}
+
+.screen.active{
+  display: block;
+}
+
+#quiz-start-wrapper, 
+#quiz-question-wrapper h2, 
+#result-wrapper h2{
+  color: var(--poke-blue);
+}
+
+#quiz-start-wrapper h2{
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+#quiz-start-wrapper p, 
+.quiz-info, 
+.result-info p {
+  color: var(--text-secondary);
+}
+
+#quiz-start-wrapper p{
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* buttons */
+
+#start-btn, #restart-btn {
+  background: linear-gradient(135deg, #ef4444, #f97316);
+}
+
+#start-btn{
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#start-btn:hover,
+#restart-btn:hover {
+  background: var(--poke-red-hover);
+  transform: translateY(-1px);
+}
+
+/* quiz header */
+
+.quiz-header{
+  margin-bottom: 2rem;
+}
+
+/* questions */
+
+#question-text {
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.quiz-info{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* answers */
+
+.answer-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.answer-btn {
+  background-color: var(--option-bg);
+  color: var(--text-primary);
+  text-align: left;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid var(--option-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.answer-btn:hover{
+  background-color: var(--option-hover);
+}
+
+.answer-btn.correct {
+  background-color: var(--correct-bg);
+  border-color: var(--correct-border);
+  color: var(--correct-text);
+}
+
+.answer-btn.incorrect {
+  background-color: var(--incorrect-bg);
+  border-color: var(--incorrect-border);
+  color: var(--incorrect-text);
+}
+
+/* progress bar */
+
+.progress-bar {
+  height: 10px;
+  background-color: #e5e7eb;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+/* results */
+
+#result-wrapper h2{
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.result-info{
+  background: #f8fafc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.result-info p{
+  font-size: 1.2rem;
+}
+
+#result-message{
+  color: var(--text-primary);
+  font-size: 2rem;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+#restart-btn{
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* responsive */
+
+@media (max-width: 600px) {
+
+  .screen{
+    padding: 1rem;
+  }
+
+  #quiz-start-wrapper h2 {
+    font-size: 2rem;
+  }
+
+  #question-text {
+    font-size: 1.2rem;
+  }
+
+  .answer-btn {
+    padding: 12px;
+  }
+
+  button {
+    padding: 12px 18px;
+    font-size: 0.8rem;
+  }
+}
