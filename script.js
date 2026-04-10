@@ -191,17 +191,17 @@ function showResults() {
 
   if (percentage === 100) {
     resultMessage.textContent =
-      "perfect score. are you secretly a pokémon master?";
+      "Perfect score. Are you secretly a pokémon master?";
   } else if (percentage >= 80) {
-    resultMessage.textContent = "impressive. you definitely know your pokémon.";
+    resultMessage.textContent = "Impressive. you definitely know your pokémon.";
   } else if (percentage >= 60) {
-    resultMessage.textContent = "not bad. you're getting there, trainer.";
+    resultMessage.textContent = "Not bad. You're getting there, trainer.";
   } else if (percentage >= 40) {
-    resultMessage.textContent = "hmm… you might need a bit more training.";
+    resultMessage.textContent = "Hmm… you might need a bit more training.";
   } else if (percentage > 0) {
-    resultMessage.textContent = "yikes. even magikarp would be disappointed.";
+    resultMessage.textContent = "Yikes. even magikarp would be disappointed.";
   } else {
-    resultMessage.textContent = "zero? did you even try?";
+    resultMessage.textContent = "Zero? Did you even try?";
   }
 }
 

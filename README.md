@@ -12,3 +12,6 @@ A simple interactive quiz game built using HTML, CSS, and JavaScript.
 - HTML
 - CSS
 - JavaScript
+
+## Live Demo
+https://deeflowdev.github.io/pokemon-quiz-game/

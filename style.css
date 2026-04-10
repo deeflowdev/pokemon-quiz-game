@@ -12,8 +12,6 @@
 
   --text-primary: #0f172a;
   --text-secondary: #475569;
-
-  /* pokemon palette */
   --accent: #ffcb05;
   --accent-hover: #eab308;
 
@@ -48,11 +46,13 @@ body{
 
 .main-container{
   background: var(--card-bg);
-  width: 100%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 500px;
   border: 1px solid var(--card-border);
-  border-radius: 1rem;
+  border-radius: 20px;
   box-shadow: 0 15px 40px var(--shadow);
+  margin: auto;
+  padding: 20px;
   overflow: hidden;
   position: relative;
 }
@@ -123,9 +123,11 @@ body{
 
 #question-text {
   color: var(--text-primary);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
   line-height: 1.4;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .quiz-info{
@@ -146,16 +148,19 @@ body{
   background-color: var(--option-bg);
   color: var(--text-primary);
   text-align: left;
-  padding: 15px;
+  padding: 14px;
+  width: 100%;
   font-size: 1rem;
   border: 1px solid var(--option-border);
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin: 4px 0;
 }
 
 .answer-btn:hover{
   background-color: var(--option-hover);
+  transform: scale(1.02);
 }
 
 .answer-btn.correct {
@@ -175,7 +180,7 @@ body{
 .progress-bar {
   height: 10px;
   background-color: #e5e7eb;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
   margin-top: 20px;
 }
@@ -207,7 +212,7 @@ body{
 
 #result-message{
   color: var(--text-primary);
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding-top: 20px;
   font-weight: bold;
 }
@@ -226,6 +231,16 @@ body{
 
 @media (max-width: 600px) {
 
+  body {
+    padding: 10px;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
   .screen{
     padding: 1rem;
   }
@@ -239,7 +254,16 @@ body{
   }
 
   .answer-btn {
+    font-size: 0.95rem;
     padding: 12px;
+  }
+
+  .quiz-info {
+    font-size: 0.9rem;
+  }
+
+  .progress-bar {
+    height: 8px;
   }
 
   button {
